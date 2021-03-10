@@ -18,9 +18,9 @@ def game():
     else:
         print("Incorrect")
 
-i = 0
+count = 1
 
-while True:
-  print(i)
+while count <=3:
+  print("Question " + str(count))
   game()
-  i+=1
+  count+=1
