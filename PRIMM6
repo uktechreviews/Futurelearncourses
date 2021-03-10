@@ -1,0 +1,36 @@
+import random
+
+print ("Weldcome to my awesome game of Truth or False")
+
+def questionBank(q):
+    statements=["I am Mr Organ", "Computer Science is cool", "It is December","Raspberry Pie is a computer","Robots will rule the world"]
+    answers=["T", "T", "F","F","F"]
+    question = statements[q]
+    print(question)
+    answer=answers[q]
+    return answer
+
+def game():
+    q = random.choice(q_list)
+    q_list.remove(q)
+    answer = questionBank(q)
+    guess = input("True or False? T/F : ")
+    if guess == answer:
+        print("Correct")
+        return ("Correct")
+    else:
+        print("Incorrect")
+        return ("Incorrect")
+
+count = 1
+score = 0
+q_list = [0,1,2,3,4]
+
+while count <=3:
+    print("Question " + str(count))
+    result = game()
+    if result == "Correct":
+        score+=1
+    count+=1
+    
+print ("Your score " + str(score) + " out of " + str(count-1))
