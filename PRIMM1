@@ -1,0 +1,21 @@
+from random import randint
+  
+def questionBank(q):
+    statements=["The sky is blue", "Grass is purple", "Fish live in the Sea"]
+    answers=["T", "F", "T"]
+    print(statements[q])
+    answer=answers[q]
+    return answer
+
+def game():
+    q = randint(0, 2)
+    answer = questionBank(q)
+    guess = input("True or False? T/F : ")
+
+    if guess == answer:
+        print("Correct")
+
+    else:
+        print("Incorrect")
+
+game()
